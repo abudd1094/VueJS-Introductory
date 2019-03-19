@@ -153,6 +153,9 @@ Vue.component('product', {
     updateProduct: function(index) {
       this.selectedVariant = index
       console.log(index)
+    },
+    addReview(productReview) {
+      this.reviews.push(productReview)
     }
   },
   computed: {
@@ -174,10 +177,6 @@ Vue.component('product', {
       }
       return 2.99
     },
-    addReview(productReview) {
-      this.reviews.push(productReview)
-      console.log('DEBUG')
-    }
   }
 
 })
